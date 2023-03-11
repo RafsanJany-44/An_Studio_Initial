@@ -19,6 +19,11 @@ public class MainActivity extends AppCompatActivity {
         // this is not the app name this is the title. The app name is in the activity_main.xml
         setTitle("Mobile Tech App");
 
+        Bundle extras = getIntent().getExtras();
+        String msg =extras.getString("message");
+        TextView textView = findViewById(R.id.TextViewOutput);
+        textView.setText(msg);
+
         EditText editText = findViewById(R.id.editTextInput);
         editText.setOnKeyListener(new View.OnKeyListener() {
             @Override
