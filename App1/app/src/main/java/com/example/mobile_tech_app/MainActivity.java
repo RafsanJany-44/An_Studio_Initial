@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     public void displayMessage(View view){
@@ -65,3 +64,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+//add menu and back arrow button
