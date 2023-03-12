@@ -28,7 +28,7 @@ public class StartActivity extends AppCompatActivity {
         switch (id){
             case R.id.action_uievent:
                 Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra("message","hello world");
+                //intent.putExtra("message","hello world");
                 startActivity(intent);
                 break;
             default:
@@ -42,6 +42,18 @@ public class StartActivity extends AppCompatActivity {
         //and the main activity.
         Intent intent = new Intent(this,MainActivity.class);
         intent.putExtra("message","Hello world");
+        startActivity(intent);
+    }
+
+    public void viewBean(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("image", "mr_bean");
+        startActivity(intent);
+    }
+
+    public void viewChaplin(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("image", "chaplin");
         startActivity(intent);
     }
 
