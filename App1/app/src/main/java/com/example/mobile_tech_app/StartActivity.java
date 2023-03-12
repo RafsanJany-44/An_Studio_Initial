@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 public class StartActivity extends AppCompatActivity {
@@ -14,6 +16,27 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start);
     }
 
+    @Override
+    public  boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_menu,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
+        switch (id){
+            case R.id.action_uievent:
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.putExtra("message","hello world");
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public void openMainActivity(View view){
         // the Intent class is used to create an instance with current activity (this)
         //and the main activity.
@@ -21,4 +44,6 @@ public class StartActivity extends AppCompatActivity {
         intent.putExtra("message","Hello world");
         startActivity(intent);
     }
+
+
 }
