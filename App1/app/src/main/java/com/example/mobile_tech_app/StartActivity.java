@@ -19,6 +19,7 @@ public class StartActivity extends AppCompatActivity {
     @Override
     public  boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.menu_menu,menu);
+        setTitle("Mobile Tech");
         return true;
     }
 
@@ -41,7 +42,7 @@ public class StartActivity extends AppCompatActivity {
         // the Intent class is used to create an instance with current activity (this)
         //and the main activity.
         Intent intent = new Intent(this,MainActivity.class);
-        intent.putExtra("message","Hello world");
+        intent.putExtra("message","Hello World");
         startActivity(intent);
     }
 

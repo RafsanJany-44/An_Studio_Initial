@@ -14,34 +14,49 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        Bundle extras = getIntent().getExtras();
         // this is not the app name this is the title. The app name is in the activity_main.xml
         setTitle("Mobile Tech App");
 
-        Bundle extras = getIntent().getExtras();
-        String msg =extras.getString("message");
-        TextView textView = findViewById(R.id.TextViewOutput);
-        textView.setText(msg);
+        String msg = extras.getString("message");
+        String img = extras.getString("image");
 
-        EditText editText = findViewById(R.id.editTextInput);
-        editText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
+        System.out.println(msg);
+        System.out.println(img);
 
-                if(event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER){
-                    // do something when the enter key on the keyboard is clicked
+        if (img == null){
+            setContentView(R.layout.activity_main);
 
-                    TextView textView  = findViewById(R.id.TextViewOutput);
-                    EditText editText  = findViewById(R.id.editTextInput);
-                    textView.setText(editText.getText());
-                    Toast.makeText(MainActivity.this,"Enter pressed",Toast.LENGTH_LONG).show();
+            TextView textView = findViewById(R.id.TextViewOutput);
+            textView.setText(msg);
 
+            EditText editText = findViewById(R.id.editTextInput);
+            editText.setOnKeyListener(new View.OnKeyListener() {
+                @Override
+                public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                    if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                        // do something when the enter key on the keyboard is clicked
+
+                        TextView textView = findViewById(R.id.TextViewOutput);
+                        EditText editText = findViewById(R.id.editTextInput);
+                        textView.setText(editText.getText());
+                        Toast.makeText(MainActivity.this, "Enter pressed", Toast.LENGTH_LONG).show();
+
+                    }
+                    return false; //disapare the keyboard after typing in landscape
                 }
-                return false; //disaapare the keyboard after typing in landscape
+            });
+          }
+        else
+        {
+            if(img.equals("mr_bean")) {
+                setContentView(R.layout.activity_demo);
             }
-        });
-
+            else{
+                setContentView(R.layout.activity_demo2);
+            }
+        }
     }
 
     public void displayMessage(View view){
