@@ -10,7 +10,7 @@
     <Button
         android:id="@+id/chaplin"
         android:layout_width="215dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="100dp"
@@ -39,7 +39,7 @@
     <Button
         android:id="@+id/mr_bean"
         android:layout_width="215dp"
-        android:layout_height="45dp"
+        android:layout_height="48dp"
         android:layout_marginStart="100dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="100dp"

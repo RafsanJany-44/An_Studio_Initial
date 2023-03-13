@@ -28,7 +28,7 @@ public class StartActivity extends AppCompatActivity {
         switch (id){
             case R.id.action_uievent:
                 Intent intent = new Intent(this, MainActivity.class);
-                //intent.putExtra("message","hello world");
+                intent.putExtra("message","hello world");
                 startActivity(intent);
                 break;
             default:

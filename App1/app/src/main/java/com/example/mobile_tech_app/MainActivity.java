@@ -1,13 +1,13 @@
 package com.example.mobile_tech_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"Enter pressed",Toast.LENGTH_LONG).show();
 
                 }
-                return true;
+                return false; //disaapare the keyboard after typing in landscape
             }
         });
 
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
     public void displayHintEditTextInput(View view){
         TextView hint  = findViewById(R.id.editTextInput);
         hint.setText("");
-        //hint.setHint("Enter a message than tap ok.");
+        hint.setHint("Enter a message than tap ok.");
 
     }
 
@@ -64,5 +64,3 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-
-//add menu and back arrow button
