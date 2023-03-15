@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                         EditText editText = findViewById(R.id.editTextInput);
                         textView.setText(editText.getText());
                         Toast.makeText(MainActivity.this, "Enter pressed", Toast.LENGTH_LONG).show();
-
                     }
                     return false; //disapare the keyboard after typing in landscape
                 }

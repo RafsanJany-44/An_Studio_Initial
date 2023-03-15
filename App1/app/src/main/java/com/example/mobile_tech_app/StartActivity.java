@@ -46,6 +46,15 @@ public class StartActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void viewMap(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+    public void viewLocationServices(View view) {
+        Intent intent = new Intent(this, LocationServicesActivity.class);
+        startActivity(intent);
+    }
     public void viewBean(View view){
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("image", "mr_bean");
