@@ -1,5 +1,4 @@
 package com.example.mobile_tech_app;
-
 import static android.content.ContentValues.TAG;
 
 import android.Manifest;
