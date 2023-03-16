@@ -24,6 +24,11 @@ public class LocationServicesActivity extends AppCompatActivity {
 
 
     }
+
+    public void viewMap(View view) {
+        Intent intent = new Intent(this, MapsActivity.class);
+        startActivity(intent);
+    }
     public void showCurrentLocation(View view) {
         myLocationPlaceMap.getLatLngAddress(myLocations);
         TextView tvlat = findViewById(R.id.take_latitude);
