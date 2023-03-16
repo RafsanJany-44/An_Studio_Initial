@@ -8,15 +8,15 @@
 
     <TextView
         android:id="@+id/take_st_add"
-        android:layout_width="314dp"
-        android:layout_height="27dp"
+        android:layout_width="312dp"
+        android:layout_height="73dp"
         android:hint="Street Address"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.215" />
+        app:layout_constraintVertical_bias="0.22" />
 
     <TextView
         android:id="@+id/teke_longitude"
@@ -43,15 +43,16 @@
         app:layout_constraintVertical_bias="0.092" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="312dp"
-        android:layout_height="48dp"
-        android:text="Button"
+        android:id="@+id/show_last_location"
+        android:layout_width="315dp"
+        android:layout_height="56dp"
+        android:onClick="showCurrentLocation"
+        android:text="Show Last Known/Current Location"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
+        app:layout_constraintVertical_bias="0.348" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

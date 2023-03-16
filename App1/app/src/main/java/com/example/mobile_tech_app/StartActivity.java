@@ -26,14 +26,10 @@ public class StartActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();
-        switch (id){
-            case R.id.action_uievent:
-                Intent intent = new Intent(this, MainActivity.class);
-                intent.putExtra("message","hello world");
-                startActivity(intent);
-                break;
-            default:
-                break;
+        if (id == R.id.action_uievent) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("message", "hello world");
+            startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
