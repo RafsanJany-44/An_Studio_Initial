@@ -63,5 +63,10 @@ public class StartActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void viewStreet(View view){
+        Intent intent = new Intent(this, StreetViewActivity.class);
+        startActivity(intent);
+    }
+
 
 }

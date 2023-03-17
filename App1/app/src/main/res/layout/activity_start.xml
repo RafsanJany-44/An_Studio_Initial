@@ -8,6 +8,19 @@
     tools:context=".StartActivity">
 
     <Button
+        android:id="@+id/mr_bean2"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="100dp"
+        android:onClick="viewBean"
+        android:text="Mr. Bean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
         android:id="@+id/button2"
         android:layout_width="215dp"
         android:layout_height="48dp"
@@ -38,15 +51,16 @@
         app:layout_constraintVertical_bias="0.071" />
 
     <Button
-        android:id="@+id/mr_bean"
+        android:id="@+id/street_view"
         android:layout_width="215dp"
         android:layout_height="48dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="332dp"
         android:layout_marginEnd="100dp"
-        android:onClick="viewBean"
-        android:text="Mr. Bean"
+        android:onClick="viewStreet"
+        android:text="Street View"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 

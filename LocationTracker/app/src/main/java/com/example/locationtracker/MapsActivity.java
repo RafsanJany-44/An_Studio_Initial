@@ -1,10 +1,7 @@
-package com.example.mobile_tech_app;
+package com.example.locationtracker;
 
 import androidx.fragment.app.FragmentActivity;
 
-import android.location.Address;
-import android.location.Geocoder;
-import android.location.Location;
 import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -13,16 +10,12 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.mobile_tech_app.databinding.ActivityMapsBinding;
-
-import java.util.List;
+import com.example.locationtracker.databinding.ActivityMapsBinding;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
-
-    MyLocationPlaceMap myLocationsPlaces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +28,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-        myLocationsPlaces = new MyLocationPlaceMap(getApplicationContext(), MapsActivity.this);
     }
 
     /**
@@ -49,20 +41,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
         mMap = googleMap;
 
-        //Add a marker in Sydney and move the camera
-       // LatLng sydney = new LatLng(-34, 151);
-        //mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(loc));
-        double longi = myLocationsPlaces.longitude;
-        double lat  = myLocationsPlaces.getLatitude();
-        LatLng myloc = new LatLng(37.38407,-121.8890183);
-        mMap.addMarker(new MarkerOptions().position(myloc).title("My Location"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(myloc));
-        myLocationsPlaces.getNearbyPlaces(mMap, "AIzaSyAZM5r8AvK0HJptlj1NnSDXXiIPN0Xc088");
-
-
+        // Add a marker in Sydney and move the camera
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
