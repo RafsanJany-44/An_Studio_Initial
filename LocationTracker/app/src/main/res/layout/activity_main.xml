@@ -11,7 +11,7 @@
         android:layout_width="279dp"
         android:layout_height="48dp"
         android:layout_marginTop="-550dp"
-        android:onClick="viewMap"
+        android:onClick="viewLocationServices"
         android:text="WHERE AM I?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
