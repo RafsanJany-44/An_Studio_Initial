@@ -6,55 +6,78 @@
     android:layout_height="match_parent"
     tools:context=".LocationServicesActivity">
 
-    <TextView
-        android:id="@+id/textView_longitude"
-        android:layout_width="328dp"
-        android:layout_height="33dp"
-        android:text="Longitude"
-        android:textSize="20sp"
+    <Button
+        android:id="@+id/show_nearby2"
+        android:layout_width="273dp"
+        android:layout_height="48dp"
+        android:text="SHOW NEARBY PLACES"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29" />
+        app:layout_constraintVertical_bias="0.262" />
+
+    <TextView
+        android:id="@+id/textView_longitude"
+        android:layout_width="340dp"
+        android:layout_height="19dp"
+        android:text="Longitude"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209" />
 
     <TextView
         android:id="@+id/you_are_here"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="YOU ARE HERE"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.058" />
-
-    <TextView
-        android:id="@+id/textView_street_add"
-        android:layout_width="338dp"
-        android:layout_height="59dp"
-        android:text="Street Address"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/textView_street_add"
+        android:layout_width="393dp"
+        android:layout_height="43dp"
+        android:text="Street Address"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
 
     <TextView
         android:id="@+id/textView_latitude"
-        android:layout_width="336dp"
-        android:layout_height="30dp"
+        android:layout_width="377dp"
+        android:layout_height="21dp"
         android:text="Latitude"
-        android:textSize="20sp"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.223" />
+        app:layout_constraintVertical_bias="0.164" />
+
+    <Button
+        android:id="@+id/st_view_or_map"
+        android:layout_width="273dp"
+        android:layout_height="48dp"
+        android:text="SHOW STREET VIEW"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
 </androidx.constraintlayout.widget.ConstraintLayout>

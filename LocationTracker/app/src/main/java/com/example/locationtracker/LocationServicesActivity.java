@@ -28,7 +28,6 @@ public class LocationServicesActivity extends AppCompatActivity {
         TextView tvaddr = findViewById(R.id.textView_street_add);
         tvaddr.setText("Address: " + street_add);
 
-
     }
 
 
