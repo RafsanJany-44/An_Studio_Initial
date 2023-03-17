@@ -40,6 +40,7 @@ public class LocationServicesActivity extends AppCompatActivity {
             tvlat.setText("Latitude: " + myLocation.getLatitude());
             tvlng.setText("Longitude: " + myLocation.getLongitude());
             tvaddr.setText("Address: " + myLocation.getAddress());
+
         }
     }
 
